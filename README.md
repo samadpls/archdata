@@ -31,40 +31,13 @@ This implementation is based on the research paper:
 
 The paper introduces a preference-aligned routing framework using a compact 1.5B model that effectively matches queries to user-defined domains and action types, outperforming proprietary models in subjective evaluation criteria.
 
-## 🏗️ Architecture
+## 📖 Documentation
 
-```mermaid
-flowchart TD
-    A[CLINC150 Dataset] --> B[DataProcessor]
-    B --> C[Domain-Action Pairs]
-    C --> D[LLM-1: Policy Generator]
-    D --> E[Policy Descriptions]
-    E --> F[LLM-2: Conversation Synthesizer]
-    F --> G[Generated Conversations]
-    G --> H[LLM-3: Alignment Evaluator]
-    H --> I{Alignment Score > Threshold?}
-    I -->|Yes| J[Aligned Conversations]
-    I -->|No| K[Rejected Conversations]
-    J --> L[Phase 2: Augmentation Module]
-    L --> M[Branching Augmentation]
-    M --> N[Original Conversations]
-    M --> O[Paraphrased Conversations]
-    M --> P[Noisy Conversations]
-    M --> Q[Irrelevant Conversations]
-    N --> R[Final Dataset]
-    O --> R
-    P --> R
-    Q --> R
-    R --> S[JSONL Output]
-```
+For detailed architecture diagrams and comprehensive documentation, see the [docs/](docs/) folder:
 
-## 📊 Data Source
+- **[Architecture](docs/ARCHITECTURE.md)**: Detailed pipeline architecture and data flow
+- **[Usage Guide](docs/USAGE.md)**: Comprehensive usage instructions and examples
 
-This pipeline uses **CLINC150** dataset as the source for domain-action pairs. CLINC150 was chosen because:
-- It's easily available and widely used in conversational AI research
-- Contains diverse intent categories perfect for routing scenarios
-- Provides clean, labeled data for policy generation
-- You can easily replace it with your own dataset by updating the `DataProcessor` class
 
 ## 🛠️ Installation
 

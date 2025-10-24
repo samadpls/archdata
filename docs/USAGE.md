@@ -1,6 +1,6 @@
 # Usage Guide
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Usage
 
@@ -32,7 +32,7 @@ dataset = pipeline.run_pipeline()
 pipeline.save_dataset(dataset)
 ```
 
-## ⚙️ Configuration Options
+## Configuration Options
 
 ### Dataset Control
 - `target_dataset_size`: **Main control parameter** - determines the final dataset size
@@ -49,7 +49,7 @@ pipeline.save_dataset(dataset)
 - `output_file`: Output filename for generated dataset
 - `batch_size`: Batch size for processing
 
-## 🔧 Advanced Usage
+## Advanced Usage
 
 ### Running with Different Dataset Sizes
 
@@ -78,7 +78,7 @@ The pipeline automatically handles augmentation ratios, but you can influence th
 2. **Modify data format**: Ensure your data matches the expected format
 3. **Update prompts**: Adjust prompts for your specific domain
 
-## 🧪 Testing Individual Components
+## Testing Individual Components
 
 ```bash
 # Test data processing
@@ -97,7 +97,7 @@ python tests/test_llm3_alignment_evaluator.py
 python tests/test_phase2_augmentation.py
 ```
 
-## 📊 Output Analysis
+## Output Analysis
 
 ### Understanding the Output
 
@@ -127,11 +127,11 @@ for sample in samples:
 print("Augmentation distribution:", augmentation_counts)
 ```
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
-1. **API Key Issues**: Ensure your Groq API key is set correctly
-2. **Memory Issues**: Reduce `target_dataset_size` for large runs
-3. **Rate Limiting**: Add delays between API calls if needed
+1. `🔑 API Key Issues`: Ensure your Groq API key is set correctly
+2. `💾 Memory Issues`: Reduce `target_dataset_size` for large runs
+3. `⏱️ Rate Limiting`: Add delays between API calls if needed
 

@@ -1,4 +1,4 @@
-# Arch-Router Dataset Generation Pipeline
+ArchData - Dataset Generation Pipeline
 
 > **Inspired by**: [Arch-Router: Aligning LLM Routing with Human Preferences](https://huggingface.co/papers/2506.16655) by Co Tran, Salman Paracha, Adil Hafeez, and Shuguang Chen from Katanemo
 

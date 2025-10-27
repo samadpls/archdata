@@ -102,14 +102,16 @@ pipeline.save_dataset(dataset)
 
 
 
+> [!IMPORTANT]
+>  This is an independent implementation inspired by the Arch-Router paper. It is not officially affiliated with Katanemo or the original authors.
+
+---
+
+This project was created with ❤️ by [samadpls](https://github.com/samadpls) who was inspired by the excellent work of the [Katanemo](https://katanemo.com/) team. I love the innovative approach they're taking in LLM routing and wanted to contribute to the community by making dataset generation more accessible.
+
+---
+
 
 
 
 This project is open source and available under the [MIT License](LICENSE).
-
-
-> [!IMPORTANT] This is an independent implementation inspired by the Arch-Router paper. It is not officially affiliated with Katanemo or the original authors.
-
----
-
-This project was created with ❤️ by [samadpls](https://github.com/samadpls) who was inspired by the excellent work of the Katanemo team. I love the innovative approach they're taking in LLM routing and wanted to contribute to the community by making dataset generation more accessible.

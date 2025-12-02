@@ -1,22 +1,22 @@
 # Architecture Documentation
 
-## 🏗️ Pipeline Overview
+## Pipeline Overview
 
 The Arch-Router dataset generation pipeline consists of two main phases:
 
 ### Phase 1: Data Processing & Policy Generation
 1. **DataProcessor**: Extracts domain-action pairs from CLINC150 dataset
-2. **LLM-1 (Policy Generator)**: Generates policy descriptions from domain-action pairs
-3. **LLM-2 (Conversation Synthesizer)**: Creates conversations following policies
-4. **LLM-3 (Alignment Evaluator)**: Scores conversation-policy alignment
+2. `🚀 LLM-1 (Policy Generator)`: Generates policy descriptions from domain-action pairs
+3. `💬 LLM-2 (Conversation Synthesizer)`: Creates conversations following policies
+4. `✅ LLM-3 (Alignment Evaluator)`: Scores conversation-policy alignment
 
 ### Phase 2: Data Augmentation (Branching Approach)
-1. **Selective Paraphrasing**: Modify specific user turns while maintaining meaning
+1. `🌿 Selective Paraphrasing`: Modify specific user turns while maintaining meaning
 2. **Noise Injection**: Add realistic interruptions and background noise
 3. **Irrelevance Generation**: Create negative samples with cross-domain content
 4. **Domain Mixing**: Cross-domain conversation mixing for additional negatives
 
-## 🔄 Data Flow
+## Data Flow
 
 ```mermaid
 flowchart TD
@@ -43,7 +43,7 @@ flowchart TD
     R --> S[JSONL Output]
 ```
 
-## 📊 Data Source
+## Data Source
 
 This pipeline uses **CLINC150** dataset as the source for domain-action pairs. CLINC150 was chosen because:
 - It's easily available and widely used in conversational AI research
@@ -51,7 +51,7 @@ This pipeline uses **CLINC150** dataset as the source for domain-action pairs. C
 - Provides clean, labeled data for policy generation
 - You can easily replace it with your own dataset by updating the `DataProcessor` class
 
-## 🔧 Configuration
+## Configuration
 
 The pipeline is controlled through a single configuration file (`src/config.py`). Key parameters:
 
@@ -70,7 +70,7 @@ The pipeline is controlled through a single configuration file (`src/config.py`)
 - `output_file`: Output filename for generated dataset
 - `batch_size`: Batch size for processing
 
-## 📊 Output Format
+## Output Format
 
 Each generated sample includes:
 
@@ -88,7 +88,7 @@ Each generated sample includes:
 }
 ```
 
-## 🔄 Augmentation Types
+## Augmentation Types
 
 The pipeline supports four types of data augmentation:
 
@@ -97,7 +97,7 @@ The pipeline supports four types of data augmentation:
 3. **Noise**: Realistic interruptions and background noise added (20-25%)
 4. **Irrelevant**: Cross-domain or completely irrelevant conversations (10-15%)
 
-## 🎨 Customization
+## Customization
 
 ### Adding New Augmentation Types
 
@@ -117,7 +117,7 @@ The pipeline supports four types of data augmentation:
 2. Update the pipeline to use your preferred provider
 3. Modify the configuration accordingly
 
-## 💡 Why Groq?
+## Why Groq?
 
 The choice of Groq API was made for cost-effectiveness reasons:
 

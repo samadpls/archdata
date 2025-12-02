@@ -46,11 +46,17 @@ For detailed architecture diagrams and comprehensive documentation, see the [doc
 
 ## Installation
 
+
+
 1. **Clone the repository:**
 ```bash
 git clone https://github.com/samadpls/archdata.git
 cd archdata
 ```
+
+**Using uv (Recommended):** Install uv from [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/), then run `uv sync` and activate with `source .venv/bin/activate`.
+
+**Using pip (Traditional):**
 
 2. **Install dependencies:**
 ```bash

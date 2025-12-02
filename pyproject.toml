@@ -1,0 +1,12 @@
+[project]
+name = "archdata"
+version = "0.1.0"
+description = "A comprehensive dataset generation pipeline for creating conversational training data for LLM routing models."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "groq>=0.4.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "jsonlines>=3.0.0",
+]
